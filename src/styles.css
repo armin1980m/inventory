@@ -1,0 +1,62 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.css";
+/*mobile table convert columns to row*/
+@media only screen and (max-width: 700px) {
+	/*fix a bug about date input type on mobile*/
+		input[type="text"],
+		input[type="email"],
+		input[type="date"] {
+		height: 2.375rem;
+	}
+	/* Force table to not be like tables anymore */
+	.resp-table table, 
+	.resp-table thead, 
+	.resp-table tbody, 
+	.resp-table th, 
+	.resp-table td, 
+	.resp-table tr { 
+		display: block; 
+	}
+ 
+	/* Hide table headers (but not display: none;, for accessibility) */
+	.resp-table thead tr { 
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+	}
+ 
+	.resp-table tr { border: 1px solid #ccc; }
+ 
+	.resp-table td { 
+		/* Behave  like a "row" */
+		border: none;
+		border-bottom: 1px solid #eee; 
+		position: relative;
+		padding-left: 50%; 
+		white-space: normal;
+		text-align:left;
+	}
+ 
+	.resp-table td:before { 
+		/* Now like a table header */
+		position: absolute;
+		/* Top/left values mimic padding */
+		top: 6px;
+		left: 6px;
+		width: 45%; 
+		padding-right: 10px; 
+		white-space: nowrap;
+		text-align:left;
+		font-weight: bold;
+	}
+ 
+	/*
+	Label the data
+	*/
+	.resp-table td:before { 
+        content: attr(data-title);
+        float: left;
+        font-weight: bold;
+        text-transform: uppercase; 
+    }
+}

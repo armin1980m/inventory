@@ -1,0 +1,15 @@
+<nav class="navbar navbar-expand-sm navbar-light bg-light">
+  <a class="navbar-brand h1" href="#">{{menuData?.brand}}</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" (click)="toggleCollapse()" 
+    data-target="#navbarSupportedContent">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent" [ngClass]="{'show': isCollapsed}">
+    <ul class="navbar-nav ">
+      <li *ngFor="let m of menuData.items" class="nav-item">
+        <a class="nav-link" [routerLink]=[m.routePath] routerLinkActive="active">{{m.name}}</a>
+      </li>
+    </ul>
+  </div>
+</nav>

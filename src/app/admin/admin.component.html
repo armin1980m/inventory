@@ -1,0 +1,13 @@
+<div class="form-row m-4">
+  <div class="col-md-2 col-lg-2 col-sm-12 text-lg-right text-md-right text-sm-left">
+    <nav class="nav flex-column">
+      <a class="nav-link" [routerLink]="['product']" routerLinkActive="active">Product Management</a>
+      <a class="nav-link" [routerLink]="['inventory']" routerLinkActive="active">Inventory</a>
+      <a class="nav-link" [routerLink]="['user']" routerLinkActive="active">User Management</a>
+    </nav>
+  </div>
+  <div class="col-md-8 col-lg-8 col-sm-12 text-left bg-light rounded">
+    <router-outlet></router-outlet>
+  </div>
+</div>
+

@@ -1,0 +1,25 @@
+<div class="jumbotron bg-white d-flex align-items-center">
+  <form class="container text-center col-lg-3 col-md-3 col-sm-12 p-2 border border-dark rounded bg-light" #f="ngForm" (ngSubmit)="onSubmit(f)" >
+    <div class="my-auto">
+      <h1>Login</h1>
+      <div class="input-group text-left p-2">
+        <span class="input-group-addon p-2">
+          <fa name="users"></fa>
+        </span>
+        <input type="text" class="form-control" ngModel name="username" placeholder="username"  required/>
+      </div>
+      <div class="input-group text-left p-2">
+        <span class="input-group-addon p-2">
+          <fa name="key"></fa>
+        </span>
+        <input type="password" class="form-control" name="password" ngModel placeholder="password" required/>
+      </div>
+      <div class="form-group text-center">
+        <button type="submit" class="=btn btn-primary p-2 rounded">Sign In</button>
+        <button type="button" class="=btn btn-primary p-2 rounded" (click)="onFacebookLogin()">Facebook Sign In</button>
+        
+      </div>
+    </div>
+  </form>
+  <ngx-loading [show]="spinnerRunning" [config]="{ backdropBorderRadius: '14px' }"></ngx-loading>
+</div>

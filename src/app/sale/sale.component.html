@@ -1,0 +1,102 @@
+<form class="container mt-3 ">
+    <h1 class="h1">Sale Report</h1>
+    <div class=" bg-light p-3">
+        <div class="form-row">
+            <div class="col-md-2 col-lg-2 col-sm-12 text-md-right text-lg-right p-md-3 p-lg-3">
+                <label class="h6">Payment Type:</label>
+            </div>
+            <div class="col-md-4 col-lg-4 col-sm-12">
+                <input type="radio" value="Cash" name="rdPaymentType" class="m-2" />Cash
+                <input type="radio" value="Credit" name="rdPaymentType" class="m-2" />Credit
+                <button type="button" class="btn-sm-block m-lg-3 m-md-3 btn btn-xs btn-success rounded" (click)="addItemMaunaully()">
+                    <fa name="plus-circle"></fa> Add Item Maually
+                </button>
+            </div>
+        </div>
+        <div class="form-row p-md-2 p-lg-2">
+            <div class="col-lg-2 col-md-2 col-sm-12 text-md-right text-sm-left text-lg-right p-lg-2 p-md-2">
+                <label class="h6">Customer Bill($):</label>
+            </div>
+            <div class="col-lg-2 col-md-2 col-sm-12 form-group">
+                <input type="text" class="form-control" name="billAmt" ngModel placeholder="Bill" />
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="col-2 text-md-right text-lg-right text-sm-left">
+                <label class="h6">Total:</label>
+            </div>
+            <div class="col-2">
+                <label class="h6">$50.00</label>
+            </div>
+        </div>
+
+        <div class="form-row p-lg-2 p-md-2">
+            <div class="col-2 text-right">
+                <label class="h6">Remain:</label>
+            </div>
+            <div class="col-2">
+                <label class="h6">$50.00</label>
+            </div>
+        </div>
+        <div class="form-row p-2">
+            <div class="col-2 text-right">
+
+            </div>
+            <div class="col-2">
+                <button type="submit" class="m-3 btn btn-xs btn-primary rounded">
+                    <fa name="shopping-cart"></fa>Pay</button>
+            </div>
+        </div>
+        <div class="form-row">
+            <table class="table table-bordered table-striped resp-table">
+                <thead class=thead-inverse>
+                    <tr>
+                        <th>Product Name</th>
+                        <th>Quantity</th>
+                        <th>Unit Price</th>
+                        <th>Total Price</th>
+                        <th class="text-center"> Remove</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td data-title="Product Name">Coke</td>
+                        <td data-title="Quantity">5</td>
+                        <td data-title="Unit Price">$1.25</td>
+                        <td data-title="Total Price">$5.25</td>
+                        <td class="text-lg-center text-md-center" data-title="Remove">
+                            <fa name="trash-o" size="2x"></fa>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td data-title="Product Name">Coke</td>
+                        <td data-title="Quantity">5</td>
+                        <td data-title="Unit Price">$1.25</td>
+                        <td data-title="Total Price">$5.25</td>
+                        <td class="text-lg-center text-md-center " data-title="Remove">
+                            <fa name="trash-o" size="2x"></fa>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td data-title="Product Name">Coke</td>
+                        <td data-title="Quantity">5</td>
+                        <td data-title="Unit Price">$1.25</td>
+                        <td data-title="Total Price">$5.25</td>
+                        <td class="text-lg-center text-md-center" data-title="Remove">
+                            <fa name="trash-o" size="2x"></fa>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</form>
+
+<app-modal-dialog title="Pick Items" [(showDialog)]="pickNewItem">
+  <app-manualproduct></app-manualproduct>
+
+</app-modal-dialog>
+
+<app-modal-dialog title="Add Manual Items" [(showDialog)]="addNewItem">
+    <app-addnewproduct></app-addnewproduct>
+</app-modal-dialog>

@@ -1,0 +1,14 @@
+<p>
+  sign-up works!
+  <button type="button" (click)="onSignup()">Signup</button>
+  <button type="button" (click)="onConfirm()">Confirm</button>
+  <button type="button" (click)="onLogin()">Login</button>
+  <button type="button" (click)="onGetCurrentUser()">Get Current User</button>
+  <button type="button" (click)="onLogout()">Logout</button>
+  <button type="button" (click)="onIsAuthenicated()">IsUserAuthenicated</button>
+  <button type="button" (click)="onFacebookAuth()">Facebook Auth</button>
+  <button type="button" (click)="onFacebookLogout()">Facebook Logout</button>
+  <button type="button" (click)="onTurnOnSpinner()">Turn On Spinner</button>
+  <!-- <app-spinner [isRunning]="spinnerRunning"></app-spinner> -->
+  <ngx-loading [show]="spinnerRunning" [config]="{ backdropBorderRadius: '14px' }"></ngx-loading>
+</p>

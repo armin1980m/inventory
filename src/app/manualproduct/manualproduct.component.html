@@ -1,0 +1,78 @@
+<div class="form-row p-2">
+  <div class="col-md-2 col-lg-2 col-sm-12 text-md-right text-lg-right text-sm-left">
+      <label class="h6">Product Name:</label>
+  </div>
+  <div class="col-md-4 col-lg-4 col-sm-12">
+      <select class="form-control">
+          <option>1</option>
+          <option>2</option>
+          <option>3</option>
+          <option>4</option>
+          <option>5</option>
+      </select>
+  </div>
+</div>
+<div class="form-row p-2">
+  <div class="col-md-2 col-lg-2 col-sm-12 text-md-right text-lg-right text-sm-left">
+      <label class="h6">Quantity:</label>
+  </div>
+  <div class="col-md-2 col-lg-2 col-sm-12">
+      <input type="text" class="form-control" ngModel placeholder="Quantity" />
+  </div>
+</div>
+<div class="form-row p-2">
+  <div class="col-md-2 col-lg-2 col-sm-12 text-md-right text-lg-right text-sm-left">
+      <label class="h6">Unit Price($):</label>
+  </div>
+  <div class="col-md-2 col-lg-2 col-sm-12">
+      <input type="text" class="form-control" ngModel placeholder="Price" />
+  </div>
+</div>
+<div class="form-row p-2 ">
+  <div class="col-lg-4 col-md-4 col-sm-12 text-center">
+      <button class="btn btn-primary p-2">
+          <fa name="plus-circle"></fa> Add Item</button>
+      <button class="btn btn-success p-2">
+          <fa name="check-circle"></fa> Done</button>
+  </div>
+</div>
+<div class="form-row">
+  <table class="table table-bordered table-striped rounded  resp-table">
+      <thead class=thead-inverse>
+          <tr>
+              <th>Product Name</th>
+              <th>Quantity</th>
+              <th>Unit Price</th>
+              <th>Total Price</th>
+              <th class="text-center">Remove</th>
+          </tr>
+      </thead>
+      <tr>
+          <td data-title="Product Name">Coke</td>
+          <td data-title="Quantity">5</td>
+          <td data-title="Unit Price">$1.25</td>
+          <td data-title="Total Price">$5.25</td>
+          <td class="text-lg-center text-md-center" data-title="Remove">
+              <fa name="trash-o" size="2x"></fa>
+          </td>
+      </tr>
+      <tr>
+          <td data-title="Product Name">Coke</td>
+          <td data-title="Quantity">5</td>
+          <td data-title="Unit Price">$1.25</td>
+          <td data-title="Total Price">$5.25</td>
+          <td class="text-lg-center text-md-center" data-title="Remove">
+              <fa name="trash-o" size="2x"></fa>
+          </td>
+      </tr>
+      <tr>
+          <td data-title="Product Name">Coke</td>
+          <td data-title="Quantity">5</td>
+          <td data-title="Unit Price">$1.25</td>
+          <td data-title="Total Price">$5.25</td>
+          <td class="text-lg-center text-md-center" data-title="Remove">
+              <fa name="trash-o" size="2x"></fa>
+          </td>
+      </tr>
+  </table>
+</div>
